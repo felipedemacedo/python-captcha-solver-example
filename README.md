@@ -14,4 +14,5 @@ Output Text:
 ```
 pip install Image
 pip install Pytesseract
+pip install Pillow
 ```
