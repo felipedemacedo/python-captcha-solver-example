@@ -40,5 +40,5 @@ pytesseract.pytesseract.tesseract_cmd = r'./Tesseract-OCR/tesseract' # https://g
 print("-----------------------")
 # print(pytesseract.image_to_string(Image.open('captcha (2).svl')))
 # https://stackoverflow.com/questions/44619077/pytesseract-ocr-multiple-config-options
-print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./tessdata"'))
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./Tesseract-OCR/tessdata"'))
 print("-----------------------")
