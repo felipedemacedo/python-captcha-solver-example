@@ -9,3 +9,9 @@ Processed:
 
 Output Text:
 96437
+
+# Install:
+```
+pip install Image
+pip install Pytesseract
+```
