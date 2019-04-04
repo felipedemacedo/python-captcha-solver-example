@@ -10,9 +10,13 @@ Processed:
 Output Text:
 96437
 
-# Install:
+# Installation
+## Windows 
 ```
+1. Download Python Python 3.7.3 from https://www.python.org/downloads/ and install it.
+2. Download project source and run:
 pip install Image
 pip install Pytesseract
 pip install Pillow
+3. Run: 'python Main.py'
 ```
