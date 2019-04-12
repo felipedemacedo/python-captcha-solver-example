@@ -33,7 +33,7 @@ newImg = Image.new("RGB",out.size)
 newImg.putdata(newPixels)
 newImg.save("./out/newImage.jpg")
 
-pytesseract.pytesseract.tesseract_cmd = r'./Tesseract-OCR/tesseract' # https://github.com/tesseract-ocr/tesseract/wiki/4.0-with-LSTM#400-alpha-for-windows
+#pytesseract.pytesseract.tesseract_cmd = r'./Tesseract-OCR/tesseract' # https://github.com/tesseract-ocr/tesseract/wiki/4.0-with-LSTM#400-alpha-for-windows
 
 # Simple image to string
 # print(pytesseract.image_to_string(Image.open('test.png')))
@@ -41,4 +41,10 @@ print("-----------------------")
 # print(pytesseract.image_to_string(Image.open('captcha (2).svl')))
 # https://stackoverflow.com/questions/44619077/pytesseract-ocr-multiple-config-options
 print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./Tesseract-OCR/tessdata"'))
+print("-----------------------")
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./Tesseract-OCR/tessdata"'))
+print("-----------------------")
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890'))
+print("-----------------------")
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c --tessdata-dir="./Tesseract-OCR/tessdata"'))
 print("-----------------------")
