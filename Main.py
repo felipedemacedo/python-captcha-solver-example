@@ -48,3 +48,5 @@ print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', 
 print("-----------------------")
 print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c --tessdata-dir="./Tesseract-OCR/tessdata"'))
 print("-----------------------")
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c --tessdata-dir="./Tesseract-OCR"'))
+print("-----------------------")
