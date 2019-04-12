@@ -10,7 +10,7 @@ white = (255,255,255)
 threshold = (160,160,160)
 
 # Open input image in grayscale mode and get its pixels.
-img = Image.open("./in/captcha.svl").convert("LA")
+img = Image.open("./in/image7.png").convert("LA")
 
 # multiply each pixel by 1.2
 out = img.point(lambda i: i * 1.3)
@@ -40,13 +40,13 @@ newImg.save("./out/newImage.jpg")
 print("-----------------------")
 # print(pytesseract.image_to_string(Image.open('captcha (2).svl')))
 # https://stackoverflow.com/questions/44619077/pytesseract-ocr-multiple-config-options
-print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./Tesseract-OCR/tessdata"'))
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="."'))
 print("-----------------------")
-print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="./Tesseract-OCR/tessdata"'))
+print(pytesseract.image_to_string(Image.open('/code/out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="."'))
 print("-----------------------")
 print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890'))
 print("-----------------------")
-print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c --tessdata-dir="./Tesseract-OCR/tessdata"'))
+print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="/code"'))
 print("-----------------------")
-print(pytesseract.image_to_string(Image.open('./out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c --tessdata-dir="./Tesseract-OCR"'))
+print(pytesseract.image_to_string(Image.open('/code/out/newImage.jpg'), lang='eng', config='--psm 10 --oem 3 -c tessedit_char_whitelist=1234567890 --tessdata-dir="/code"'))
 print("-----------------------")
